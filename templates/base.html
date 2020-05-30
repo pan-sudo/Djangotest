@@ -8,24 +8,53 @@
 	<title>
 		{% block title %} {% endblock %}
 	</title>
-	<hr>
+
+
+<!--  just test for it
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
 <body>
 	<div class='container-fluid'>
 		{% include 'header.html' %}
-		<hr>
-		<div class='panel panel-default'>
-			<div class='panel-heading'>
-				{% block headmessage %} {% endblock %}
+		<div class='row'>
+			<div class='col-sm-4 col-md-4'>
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h3>
+							目录清单列表什么都好显示来看看
+						</h3>
+					</div>
+
+					<div class='panel-body'>
+						<div class='list-group'>
+							<a href='/' class='list-group-item'>HOME</a>
+							<a href='/' class='list-group-item'>新闻</a>
+							<a href='/' class='list-group-item'>TT新闻</a>
+						</div>
+						<script type="text/javascript" src="http://feedjit.com/serve/?vv=1515&amp;tft=3&amp;dd=0&amp;wid=&amp;pid=0&amp;proid=0&amp;bc=FFFFFF&amp;tc=000000&amp;brd1=012B6B&amp;lnk=135D9E&amp;hc=FFFFFF&amp;hfc=2853A8&amp;btn=C99700&amp;ww=190&amp;wne=6&amp;srefs=0"></script><noscript><a href="http://feedjit.com/">Live Traffic Stats</a></noscript>
+					</div>
+				</div>
 			</div>
-			<div class='panel-body'>
-				{% block content %} {% endblock %}
-			</div>
-			<div class='panel-footer'>
-				{% include 'footer.html' %}
+			<div class='col-sm-8 col-md-8'>
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						{% block headmessage %} {% endblock %}
+					</div>
+					<div class='panel-body'>
+						{% block content %} {% endblock %}
+					</div>
+					<div class='panel-footer'>
+						{% include 'footer.html' %} 
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
